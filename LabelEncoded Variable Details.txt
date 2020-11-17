@@ -1,0 +1,49 @@
+1. Job:				
+   0 = Admin
+   1 = Blue-Collar
+   2 = Entrepreneur
+   3 = Housemaid
+   4 = Management
+   5 = Retired
+   6 = Self-Employed
+   7 = Services
+   8 = Student
+   9 = Technician
+   10 = Unemployed
+   11 = Unknown
+2. Education:
+   0 = Primary
+   1 = Secondary
+   2 = Tertiary
+   3 = Unknown
+3. Default:
+   0 = No
+   1 = Yes
+4. Loan:
+   0 = No
+   1 = Yes
+5. Contact:
+   0 = Cellular
+   1 = Telephone
+   2 = Unknown
+6. Month:
+   0 = April
+   1 = August
+   2 = December
+   3 = February
+   4 = January
+   5 = July
+   6 = June
+   7 = March
+   8 = May
+   9 = November
+   10 = October
+   11 = September
+7. pOutcome:
+   0 = Failure
+   1 = Other
+   2 = Success
+   3 = Unknown
+8. y (target variable):
+   0 = No
+   1 = Yes
