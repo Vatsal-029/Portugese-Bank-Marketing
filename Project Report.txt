@@ -1,0 +1,67 @@
+1. Data Analysis report:
+
+1.1 About the data set:
+a. Orignal dataset shape = 45211 rows, 17 columns (including the target variable)
+b. No missing data
+c. Target variable with 2 unique instances (Yes and No)
+d. No major correlation between variables, however 45% (positive) correlation was detected among pdays and previous
+e. Outlier presence in almost all the variables
+f. Data after split: 
+	1. X_train = (36,168, 13)
+	2. X_test = (9,043, 13)
+	3. Y_train = (36,168,1)
+	4. Y_test = (9,043,1)
+
+1.2 Variable analysis:
+a. Age demographic observed is between 18-95 years of age, where maximum clients/ instances belong to the bin 30-40 years
+b. The balance maintained by clients/ instances also include negative balances i.e., defaulters
+c. The maximum duration a call lasted was 82mins, and minimum was 0 or no contact
+d. The campaign variable clearly indicates that most of the connection during the campaign takes place in the first seven contacts only, and then gradually decreases as the number of contacts increases
+e. It is observed that the bank did not implement rigorious follow-up's as the maximum number of days that passed by after the client was last contacted of the previous campaign was 871days or 2years 3months
+f. previous
+g. Although the 3 primary target clients of the bank seem to be Blue-Collar clients, Clients of management background/ occupation, and Techincians (based on numbers of instances), the rate at which the three classes convert are far less than Students, Retired, and Unemployed, these classes have a better conversion rate as compared to all other categories
+h. The day of the month does not seem to affect the final output/ target variable as consistent subscribers and non-subscribers are observed
+i. Based on the number of subscribers per month - April, May, June, July and Aug seem to be important, but when the success percentage is checked - April, March, Sept, Oct and Dec seem to have more success rate
+j. It is observed that most of the clients have completed their secondary education, and more subscribers belong to that category
+k. It is also observed that the highest and the best mode of contact is Cellular
+
+1.3 Charts and Graphs:
+a. Seaborn and Matplotlib is used to prepare charts and graphs for this project
+b. Seaborn - Catplot, Countplot, and Heatmap
+c. Histograms to identify the majority age group clients
+d. Boxplot to identify presence outliers in each numeric variable
+
+1.4 Data Split:
+a. Data is first splitted into X and Y after pre-processing using Label Encoder
+b. Data gets standardized for model building using Standard Scaler
+c. Data is splitted in 80:20 ratio train:test)
+
+2. Model Report:
+
+2.1 Method 1 - Basic Model:
+1. Logistic Regression: Accuracy = 89% ; AUC = 58%
+2. Naive Bayes: Accuracy = 83% ; AUC = 67%
+3. Decision Tree: Accuracy = 87% ; AUC = 69%
+4. Support Vector Classifier: Accuracy = 90%
+5. KNearest Neighbors Classifier: Accuracy = 89% ; AUC = 66%
+
+2.2 Method 2 - KMeans Cross Validation (Tuning technique):
+1. Logistic Regression: Accuracy = 89% ; AUC = 58%
+2. Naive Bayes: Accuracy = 83% ; AUC = 67%
+3. Decision Tree: Accuracy = 87% ; AUC = 68%
+4. Support Vector Classifier: Accuracy = 90%
+5. KNearest Neighbors Classifier: Accuracy = 89% ; AUC = 64%
+
+2.3 Method 3 - Threshold Adjustment (Tuning technique):
+1. Logistic Regression: Accuracy = 89%
+2. Naive Bayes: Accuracy = 85%
+3. Decision Tree: Accuracy = 87%
+4. KNearest Neighbors Classifier: Accuracy = 89%
+
+
+Suggestions:
+1. The bank should start focusing on students who are particularly in their secondary or tertiary education level, and retired people who also have a secondary or tertiary degree, along with Blue-Collar clients, clients of management background/ occupation, and techincians
+2. The bank should start maintaining a reliable data and reduce UNKNOWN inputs so as to improve analysis
+3. The bank should increase its instances of contact during April, March, September, October and December, where the convert rate is higher than others, while not neglecting other months
+4. As observed earlier, the rate of campaign increases when number of contact is less, therefore the bank must not waste such opportunity and present all neccessary information to the client in the early stage of contact itself so as to increase the chances of getting more subscribers
+5. As it is observed that the duration for the same is also between 1min to 50mins, the employees of the bank must make best use of such time to feed information to the client in a way of enabling them to make decision quickly
