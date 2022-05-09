@@ -1,4 +1,4 @@
-# Portugese-Bank-Marketing
+# Portuguese-Bank-Marketing
 Citation Request:
   This dataset is public available for research. The details are described in [Moro et al., 2011]. 
   Please include this citation if you plan to use this database:
